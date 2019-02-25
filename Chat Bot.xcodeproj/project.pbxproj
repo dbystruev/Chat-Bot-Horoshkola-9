@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		6902C1BF2223BDC5009F3105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902C1BE2223BDC5009F3105 /* AppDelegate.swift */; };
-		6902C1C12223BDC5009F3105 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902C1C02223BDC5009F3105 /* ViewController.swift */; };
 		6902C1C42223BDC5009F3105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6902C1C22223BDC5009F3105 /* Main.storyboard */; };
 		6902C1C62223BDC7009F3105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6902C1C52223BDC7009F3105 /* Assets.xcassets */; };
 		6902C1C92223BDC7009F3105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6902C1C72223BDC7009F3105 /* LaunchScreen.storyboard */; };
+		6902C1D12223C0A6009F3105 /* ChatBotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902C1D02223C0A6009F3105 /* ChatBotTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6902C1BB2223BDC5009F3105 /* Chat Bot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat Bot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6902C1BE2223BDC5009F3105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6902C1C02223BDC5009F3105 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6902C1C32223BDC5009F3105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6902C1C52223BDC7009F3105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6902C1C82223BDC7009F3105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6902C1CA2223BDC7009F3105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6902C1D02223C0A6009F3105 /* ChatBotTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				6902C1BE2223BDC5009F3105 /* AppDelegate.swift */,
-				6902C1C02223BDC5009F3105 /* ViewController.swift */,
+				6902C1D02223C0A6009F3105 /* ChatBotTableViewController.swift */,
 				6902C1C22223BDC5009F3105 /* Main.storyboard */,
 				6902C1C52223BDC7009F3105 /* Assets.xcassets */,
 				6902C1C72223BDC7009F3105 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6902C1C12223BDC5009F3105 /* ViewController.swift in Sources */,
+				6902C1D12223C0A6009F3105 /* ChatBotTableViewController.swift in Sources */,
 				6902C1BF2223BDC5009F3105 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
