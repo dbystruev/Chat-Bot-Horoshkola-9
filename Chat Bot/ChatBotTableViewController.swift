@@ -20,8 +20,19 @@ class ChatBotTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let alert = UIAlertController(title: "Введите вопрос", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            guard let textField = alert.textFields?.first else { return }
+            print(#function, textField.text ?? "nil")
+        }))
+        alert.addTextField { textField in
+            textField.addTarget(self, action: #selector(self.textFieldHandler(sender:)), for: .primaryActionTriggered)
+        }
+        
         present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func textFieldHandler(sender: UITextField) {
+        print(#function, sender.text ?? "nil")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
