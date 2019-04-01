@@ -10,19 +10,29 @@ import UIKit
 
 class ChatBotTableViewController: UITableViewController {
     
-    var answers: [String] = [
-        "9:00 Консультация по ОГЭ по русскому языку",
-        "10:00 Информатика",
-        "10:50 Английский язык",
-    ]
+    struct Answer {
+        var text: String
+        var date: Date
+    }
+    
+    var answers = [Answer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI()
+    }
+    
+    func updateUI() {
         let alert = UIAlertController(title: "Введите вопрос", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             guard let textField = alert.textFields?.first else { return }
-            print(#function, textField.text ?? "nil")
+            guard let text = textField.text else { return }
+            guard !text.isEmpty else { return }
+            
+            let answer = Answer(text: text, date: Date())
+            self.answers.append(answer)
+            self.tableView.reloadData()
+            self.updateUI()
         }))
         alert.addTextField { textField in
             textField.addTarget(self, action: #selector(self.textFieldHandler(sender:)), for: .primaryActionTriggered)
@@ -43,7 +53,9 @@ class ChatBotTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         
         let index = indexPath.row
-        cell.textLabel?.text = answers[index]
+        let answer = answers[index]
+        cell.textLabel?.text = answer.text
+        cell.detailTextLabel?.text = "\(answer.date)"
         
         return cell
     }
